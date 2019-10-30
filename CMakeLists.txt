@@ -86,8 +86,8 @@ enable_testing()
 ###### Configure compiler ######
 
 #Always include debug info and aggressive warnings
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -march=native -mno-avx")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -march=native -mno-avx")
 
 # Some apps break with -O3 on recent clang versions.
 # Tracking that down is a work in progress, so for the current release,
